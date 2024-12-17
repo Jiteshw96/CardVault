@@ -11,6 +11,6 @@ abstract class BaseViewModel<UiState> : ViewModel() {
     protected val _uiState = MutableStateFlow(initialState)
     val uiState: StateFlow<UiState> = _uiState
 
-    abstract fun setInitialState() : UiState
+    abstract fun setInitialState(): UiState
 
 }

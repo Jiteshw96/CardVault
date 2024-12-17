@@ -7,11 +7,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
+
 class GetCreditCardsUseCase(
     private val creditCardsRepository: CreditCardsRepository
 ) {
     operator fun invoke(): FlowResult<CreditCardData> = flow {
         val result = creditCardsRepository.getCreditCards()
         emit(result)
-        }.flowOn(Dispatchers.IO)
+    }.flowOn(Dispatchers.IO)
 }

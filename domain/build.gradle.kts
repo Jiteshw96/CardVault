@@ -34,6 +34,10 @@ android {
 
 dependencies {
 
+    implementation(libs.koin.android)
+    implementation(libs.koin.core)
+    implementation(libs.koin.annotation)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -1,4 +1,4 @@
-package com.app.presentation.ui
+package com.app.presentation.ui.activity
 
 import androidx.lifecycle.viewModelScope
 import com.app.domain.common.Result
@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 
 class HomeViewModel(
-    private val getCreditCardsUseCase: GetCreditCardsUseCase
+    getCreditCardsUseCase: GetCreditCardsUseCase
 ) : BaseViewModel<HomeUiState>() {
 
     val searchQuery = MutableStateFlow("")
@@ -39,27 +39,23 @@ class HomeViewModel(
         )
 
     val rewardsList: StateFlow<List<Benefit>> = combine(
-        homeUiState, currentSelectedItem
-    ) { uiState, index ->
-        (uiState as? HomeUiState.Success)?.cardList?.get(index)?.benefits.orEmpty()
-    }.stateIn(
-        scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5_000),
-        initialValue = emptyList(),
-    )
+        homeUiState, currentSelectedItem, searchQuery
+    ) { uiState, index, query ->
 
+        val cardRewards = (uiState as? HomeUiState.Success)
+            ?.cardList
+            ?.getOrNull(index)
+            ?.benefits
+            .orEmpty()
 
-    val filterRewardsList: StateFlow<List<Benefit>> = combine(
-        rewardsList, searchQuery
-    ) { rewardsList, query ->
         if (query.isNotEmpty()) {
-            val pattern = ".*$searchQuery.*"
+            val pattern = ".*$query.*"
             val regex = Regex(pattern, RegexOption.IGNORE_CASE)
-            rewardsList.filter { rewards ->
-                rewards.name.matches(regex)
+            cardRewards.filter { rewards ->
+                rewards.name.contains(regex)
             }
         } else {
-            rewardsList
+            cardRewards
         }
     }.stateIn(
         scope = viewModelScope,
@@ -74,7 +70,7 @@ class HomeViewModel(
             BottomSheetInsights(itemCount = characterMap.size, characterOccurrences = characterMap)
         }.stateIn(
             scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5_000),
+            started = SharingStarted.Eagerly,
             initialValue = BottomSheetInsights(itemCount = 0, characterOccurrences = emptyMap()),
         )
 
@@ -86,7 +82,7 @@ class HomeViewModel(
         val characters = hashMapOf<Char, Int>()
         for (item in rewardsList) {
             for (data in item.name) {
-                if(!data.isWhitespace()){
+                if (!data.isWhitespace()) {
                     characters[data] = (characters[data] ?: 0) + 1
                 }
             }

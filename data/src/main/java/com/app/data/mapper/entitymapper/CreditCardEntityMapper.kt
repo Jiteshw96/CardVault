@@ -5,7 +5,7 @@ import com.app.domain.model.CreditCard
 
 object CreditCardEntityMapper : BaseEntityMapper<CreditCardEntity, CreditCard> {
     override fun mapFromEntity(remoteObject: CreditCardEntity): CreditCard {
-       return CreditCard(
+        return CreditCard(
             name = remoteObject.name,
             image = remoteObject.image,
             benefits = remoteObject.benefits.map { benefitRemote ->

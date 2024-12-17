@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -30,6 +31,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -38,8 +43,14 @@ android {
 dependencies {
 
     implementation(project(":presentation"))
+    implementation(project(":data"))
+    implementation(project(":remote"))
+    implementation(libs.koin.android)
+    implementation(libs.koin.annotation)
+    implementation(libs.koin.ksp.compiler)
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.core.splash.screen)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)

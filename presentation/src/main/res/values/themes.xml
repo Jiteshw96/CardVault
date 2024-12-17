@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CardVault" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:statusBarColor">@color/windowBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.CardVault" parent="Base.Theme.CardVault" />
+
+    <style name="TextAppearance.App.Heading" parent="Theme.CardVault">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle" parent="Theme.CardVault">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="Theme.CardVault">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="TextAppearance.App.Body" parent="Theme.CardVault">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorPrimary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/default_dot</item>
+        <item name="postSplashScreenTheme">@style/Theme.CardVault</item>
+    </style>
+</resources>

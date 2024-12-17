@@ -9,13 +9,14 @@ import com.app.domain.repository.CreditCardsRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
-class CreditCardsRepositoryImpl (
+
+class CreditCardsRepositoryImpl(
     private val creditCardsRemoteDataSource: CreditCardsRemoteDataSource,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
-) : CreditCardsRepository{
+) : CreditCardsRepository {
 
-    override suspend fun getCreditCards() : Result<CreditCardData> = SafeApiCall.execute(
+    override suspend fun getCreditCards(): Result<CreditCardData> = SafeApiCall.execute(
         dispatcher = dispatcher,
-        apiCall = { CreditCardDataEntityMapper.mapFromRemote(creditCardsRemoteDataSource.fetchCreditCards()) }
+        apiCall = { CreditCardDataEntityMapper.mapFromEntity(creditCardsRemoteDataSource.fetchCreditCards()) }
     )
 }
