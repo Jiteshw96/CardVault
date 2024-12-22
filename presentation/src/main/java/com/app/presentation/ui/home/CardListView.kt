@@ -1,7 +1,6 @@
 package com.app.presentation.ui.home
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -15,9 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
-import com.app.domain.model.Benefit
+import com.app.domain.model.Reward
 import com.app.presentation.R
-import com.app.presentation.theme.LocalCustomColorPalette
 import com.app.presentation.ui.components.CardCarousel
 import com.app.presentation.ui.components.CardItemView
 import com.app.presentation.ui.components.SearchInputView
@@ -29,7 +27,7 @@ fun CardListView(
     modifier: Modifier = Modifier,
     pagerState: PagerState,
     carouselImage: List<Int>,
-    rewardsList: List<Benefit>,
+    rewardsList: List<Reward>,
     userQuery: String,
     onSearchChange: (String) -> Unit
 ) {

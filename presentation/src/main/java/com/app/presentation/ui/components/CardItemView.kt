@@ -23,12 +23,12 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.app.domain.model.Benefit
+import com.app.domain.model.Reward
 import com.app.presentation.R
 import com.app.presentation.theme.LocalCustomColorPalette
 
 @Composable
-fun CardItemView(cardItem: Benefit) {
+fun CardItemView(cardItem: Reward) {
     Box(
         modifier = Modifier
             .clip(shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius)))
@@ -76,7 +76,7 @@ fun CardItemView(cardItem: Benefit) {
 @Composable
 fun PreviewCardItemView() {
     CardItemView(
-        cardItem = Benefit(
+        cardItem = Reward(
             name = "Travel Card",
             description = "Free lounge access to any aiport",
             image = R.drawable.bg_splash_gradient

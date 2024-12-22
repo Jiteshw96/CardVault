@@ -23,8 +23,8 @@ fun CardCarousel(
     pagerState: PagerState
 ) {
     Column(modifier = Modifier
-        .padding(bottom = dimensionResource(id = R.dimen.margin_large))
         .background(LocalCustomColorPalette.current.screenBackground)
+        .padding(bottom = dimensionResource(id = R.dimen.margin_medium))
     ) {
         HorizontalPager(state = pagerState) { page ->
             CarouselItem(carouselItems[page])

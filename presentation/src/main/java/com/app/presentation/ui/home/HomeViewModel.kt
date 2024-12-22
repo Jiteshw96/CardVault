@@ -2,7 +2,7 @@ package com.app.presentation.ui.home
 
 import androidx.lifecycle.viewModelScope
 import com.app.domain.common.Result
-import com.app.domain.model.Benefit
+import com.app.domain.model.Reward
 import com.app.domain.usecase.GetCreditCardsUseCase
 import com.app.presentation.base.BaseViewModel
 import com.app.presentation.mapper.ResultMapper
@@ -41,14 +41,14 @@ class HomeViewModel(
             initialValue = HomeUiState.Loading,
         )
 
-    val rewardsList: StateFlow<List<Benefit>> = combine(
+    val rewardsList: StateFlow<List<Reward>> = combine(
         homeUiState, currentSelectedItem, searchQuery
     ) { uiState, index, query ->
 
         val cardRewards = (uiState as? HomeUiState.Success)
             ?.cardList
             ?.getOrNull(index)
-            ?.benefits
+            ?.rewards
             .orEmpty()
 
         if (query.isNotEmpty()) {
@@ -87,7 +87,7 @@ class HomeViewModel(
     }
 
     private fun findTopResults(
-        rewardsList: List<Benefit>,
+        rewardsList: List<Reward>,
         numberOfItems: Int = 3,
     ): Map<Char, Int> {
         val characters = hashMapOf<Char, Int>()

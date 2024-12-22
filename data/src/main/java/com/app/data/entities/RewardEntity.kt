@@ -1,7 +1,7 @@
-package com.app.remote.model
+package com.app.data.entities
 
 
-data class BenefitRemote(
+data class RewardEntity(
     val name: String,
     val description: String,
     val image: Int

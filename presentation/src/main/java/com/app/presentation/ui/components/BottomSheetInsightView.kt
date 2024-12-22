@@ -2,6 +2,7 @@ package com.app.presentation.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomSheetDefaults
@@ -22,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.app.presentation.R
 import com.app.presentation.model.BottomSheetInsights
 import com.app.presentation.theme.LocalCustomColorPalette
+import com.app.presentation.utils.extension.BottomSheetFormatter.formatBottomSheetItem
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -37,7 +39,7 @@ fun BottomSheetInsightsView(
     }
 
     ModalBottomSheet(
-        modifier = Modifier.height(dimensionResource(id = R.dimen.dp_400)),
+        modifier = Modifier.fillMaxSize(),
         onDismissRequest = { onDismiss() },
         sheetState = modalBottomSheetState,
         dragHandle = { BottomSheetDefaults.DragHandle() },
@@ -70,7 +72,7 @@ fun BottomSheetInsightsView(
                 repeat(characters.size) { index ->
                     Row(Modifier.padding(top = dimensionResource(id = R.dimen.margin_small))) {
                         Text(
-                            text = characters[index].key.toString(),
+                            text = characters[index].key.formatBottomSheetItem(),
                             style = MaterialTheme.typography.bodyLarge
                         )
                         Text(

@@ -1,7 +1,7 @@
 package com.app.domain.model
 
 
-data class Benefit(
+data class Reward(
     val name: String,
     val description: String,
     val image: Int
