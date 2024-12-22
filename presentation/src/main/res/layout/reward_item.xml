@@ -9,10 +9,10 @@
         android:layout_marginHorizontal="@dimen/horizontal_margin_large"
         android:layout_marginVertical="@dimen/dp_3"
         android:padding="@dimen/dp_5"
-        android:background="@drawable/bg_city_item">
+        android:background="@drawable/bg_card_item">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/city_image"
+            android:id="@+id/card_image"
             android:layout_width="@dimen/dp_60"
             android:layout_height="@dimen/dp_60"
             android:layout_margin="@dimen/margin_small"
@@ -22,7 +22,7 @@
             app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/city_name"
+            android:id="@+id/card_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_margin_medium"
@@ -30,11 +30,11 @@
             android:inputType="textNoSuggestions"
             android:theme="@style/TextAppearance.App.Title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/city_image"
-            app:layout_constraintTop_toTopOf="@+id/city_image" />
+            app:layout_constraintStart_toEndOf="@+id/card_image"
+            app:layout_constraintTop_toTopOf="@+id/card_image" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/city_detail"
+            android:id="@+id/card_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -42,8 +42,8 @@
             tools:text="@string/reward_description"
             android:theme="@style/TextAppearance.App.Subtitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/city_name"
-            app:layout_constraintTop_toBottomOf="@+id/city_name" />
+            app:layout_constraintStart_toStartOf="@+id/card_name"
+            app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,7 +67,7 @@ class HomeViewModel(
     val bottomSheetInsights: StateFlow<BottomSheetInsights> = rewardsList
         .map { rewardsList ->
             val characterMap = findTopResults(rewardsList)
-            BottomSheetInsights(itemCount = characterMap.size, characterOccurrences = characterMap)
+            BottomSheetInsights(itemCount = rewardsList.size, characterOccurrences = characterMap)
         }.stateIn(
             scope = viewModelScope,
             started = SharingStarted.Eagerly,

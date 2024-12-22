@@ -32,9 +32,9 @@ class RewardAdapter(
         RecyclerView.ViewHolder(mBinding.root) {
 
         fun bindData(reward: Benefit) {
-            mBinding.cityName.text = reward.name
-            mBinding.cityDetail.text = reward.description
-            mBinding.cityImage.setBackgroundResource(reward.image)
+            mBinding.cardName.text = reward.name
+            mBinding.cardDescription.text = reward.description
+            mBinding.cardImage.setBackgroundResource(reward.image)
         }
     }
 }
