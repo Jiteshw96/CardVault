@@ -9,9 +9,21 @@ import com.app.remote.model.CreditCardRemote
 object CreditCardData {
     val creditCardRemoteData = CreditCardDataRemote(
          creditCards = listOf(
+             CreditCardRemote(
+                 name = "Travel Elite Card",
+                 image = R.drawable.student_card,
+                 rewards = listOf(
+                     RewardRemote("Airline miles", "2 miles per $1 spent on travel", R.drawable.credit_card),
+                     RewardRemote("Travel statement credits", "$200 annual travel credit", R.drawable.credit_card),
+                     RewardRemote("No foreign transaction fees", "Zero fees on international purchases", R.drawable.credit_card),
+                     RewardRemote("Concierge services", "24/7 concierge support for travel bookings", R.drawable.credit_card),
+                     RewardRemote("Free checked bags", "1 free checked bag on all flights", R.drawable.credit_card),
+                     RewardRemote("Discount on travel bookings", "5% discount on flight bookings", R.drawable.credit_card)
+                 )
+             ),
             CreditCardRemote(
                 name = "Premium Rewards Card",
-                image = R.drawable.credit_card,
+                image = R.drawable.travel_card,
                 rewards = listOf(
                     RewardRemote("Cash back", "2% cash back on all purchases", R.drawable.credit_card),
                     RewardRemote("Travel insurance coverage", "Up to $500,000 coverage", R.drawable.credit_card),
@@ -22,7 +34,7 @@ object CreditCardData {
             ),
             CreditCardRemote(
                 name = "Cash Back MasterCard",
-                image = R.drawable.credit_card, 
+                image = R.drawable.gold_card,
                 rewards = listOf(
                     RewardRemote("Cash back", "1.5% cash back on every purchase", R.drawable.credit_card),
                     RewardRemote("Bonus points", "15 bonus points for every $100 spent", R.drawable.credit_card),
@@ -32,20 +44,8 @@ object CreditCardData {
                 )
             ),
             CreditCardRemote(
-                name = "Travel Elite Card",
-                image = R.drawable.credit_card,
-                rewards = listOf(
-                    RewardRemote("Airline miles", "2 miles per $1 spent on travel", R.drawable.credit_card),
-                    RewardRemote("Travel statement credits", "$200 annual travel credit", R.drawable.credit_card),
-                    RewardRemote("No foreign transaction fees", "Zero fees on international purchases", R.drawable.credit_card),
-                    RewardRemote("Concierge services", "24/7 concierge support for travel bookings", R.drawable.credit_card),
-                    RewardRemote("Free checked bags", "1 free checked bag on all flights", R.drawable.credit_card),
-                    RewardRemote("Discount on travel bookings", "5% discount on flight bookings", R.drawable.credit_card)
-                )
-            ),
-            CreditCardRemote(
                 name = "Luxury Rewards Visa",
-                image = R.drawable.credit_card, 
+                image = R.drawable.platinum_card,
                 rewards = listOf(
                     RewardRemote("Hotel loyalty points", "Earn 3 points per $1 spent at hotels", R.drawable.credit_card),
                     RewardRemote("Free hotel upgrades", "Upgrade to suite at select hotels", R.drawable.credit_card),
@@ -56,7 +56,7 @@ object CreditCardData {
             ),
             CreditCardRemote(
                 name = "Everyday Cash Card",
-                image = R.drawable.credit_card, 
+                image = R.drawable.silver_card,
                 rewards = listOf(
                     RewardRemote("Cash back on specific categories", "5% cash back on rotating categories", R.drawable.credit_card),
                     RewardRemote("Purchase protection", "Protection against damage or theft for 90 days", R.drawable.credit_card),
