@@ -47,7 +47,7 @@ fun CardVaultTheme(
     }
 
     val view = LocalView.current
-    val statusBarColor = colorAccent.toArgb()
+    val statusBarColor = windowBackground.toArgb()
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window

@@ -38,13 +38,6 @@ fun CardListView(
 
     LazyColumn(
         modifier = modifier
-            .background(LocalCustomColorPalette.current.screenBackground)
-            .padding(
-                start = dimensionResource(R.dimen.margin_large),
-                end = dimensionResource(R.dimen.margin_large),
-                top = dimensionResource(R.dimen.margin_large),
-                bottom = dimensionResource(id = R.dimen.dp_0),
-            )
             .wrapContentHeight()
     ) {
         item {

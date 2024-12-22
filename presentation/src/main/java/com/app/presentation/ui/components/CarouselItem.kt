@@ -40,5 +40,5 @@ fun CarouselItem(@DrawableRes resourceId: Int) {
 @Preview
 @Composable
 fun PreviewCarouselItem() {
-    CarouselItem(resourceId = R.drawable.bg_card_item)
+    CarouselItem(resourceId = R.drawable.bg_splash_gradient)
 }

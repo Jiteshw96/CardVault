@@ -38,9 +38,9 @@ fun SearchInputView(
     val keyboardManager = LocalSoftwareKeyboardController.current
     Column(
         modifier = Modifier
+            .padding(vertical = dimensionResource(id = R.dimen.dp_12))
             .background(LocalCustomColorPalette.current.searchBackgroundColor)
             .border(1.dp, LocalCustomColorPalette.current.accentColor)
-            .padding(vertical = dimensionResource(id = R.dimen.dp_12))
     ) {
         OutlinedTextField(
             value = userQuery,

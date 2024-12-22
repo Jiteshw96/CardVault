@@ -79,7 +79,7 @@ fun PreviewCardItemView() {
         cardItem = Benefit(
             name = "Travel Card",
             description = "Free lounge access to any aiport",
-            image = R.drawable.bg_card_item
+            image = R.drawable.bg_splash_gradient
         )
     )
 }

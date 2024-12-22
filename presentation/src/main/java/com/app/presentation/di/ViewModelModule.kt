@@ -1,7 +1,8 @@
 package com.app.presentation.di
 
 import com.app.presentation.ui.home.HomeViewModel
-import org.koin.core.module.dsl.viewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
+
 import org.koin.dsl.module
 
 

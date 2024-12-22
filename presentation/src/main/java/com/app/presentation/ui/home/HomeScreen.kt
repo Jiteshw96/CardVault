@@ -1,5 +1,6 @@
 package com.app.presentation.ui.home
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -16,12 +17,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
+import com.app.presentation.theme.LocalCustomColorPalette
 import com.app.presentation.ui.components.BottomSheetInsightsView
 import com.app.presentation.ui.components.FloatingActionButton
 import com.app.presentation.ui.components.NoDataFoundView
 import com.app.presentation.ui.components.ProgressBar
 import com.app.presentation.utils.extension.ViewExtension.getModifierWithScaffoldPadding
-import org.koin.compose.viewmodel.koinViewModel
+import org.koin.androidx.compose.koinViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,11 +50,12 @@ fun HomeScreen(
         snapshotFlow { pagerState.currentPage }.collect { page ->
             focusManager.clearFocus()
             homeViewModel.updateCurrentCarouselItem(page)
+            homeViewModel.updateSearchQuery("")
         }
     }
 
     Scaffold(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(LocalCustomColorPalette.current.screenBackground),
         floatingActionButton = {
             FloatingActionButton { isBottomSheetVisible = true }
         },
