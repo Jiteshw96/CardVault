@@ -8,8 +8,8 @@ object CreditCardRemoteMapper : BaseRemoteMapper<CreditCardRemote, CreditCardEnt
        return CreditCardEntity(
             name = remoteObject.name,
             image = remoteObject.image,
-            benefits = remoteObject.benefits.map { benefitRemote ->
-                BenefitRemoteMapper.mapFromRemote(benefitRemote)
+            rewards = remoteObject.rewards.map { rewardRemote ->
+                RewardRemoteMapper.mapFromRemote(rewardRemote)
             }
         )
     }

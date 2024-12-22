@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.app.domain.model.Benefit
+import com.app.domain.model.Reward
 import com.app.presentation.R
 import com.app.presentation.databinding.RewardItemBinding
 
 class RewardAdapter(
-    private val rewardsList: List<Benefit>
+    private val rewardsList: List<Reward>
 ) : RecyclerView.Adapter<RewardAdapter.RewardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RewardViewHolder {
@@ -31,7 +31,7 @@ class RewardAdapter(
     inner class RewardViewHolder(private val mBinding: RewardItemBinding) :
         RecyclerView.ViewHolder(mBinding.root) {
 
-        fun bindData(reward: Benefit) {
+        fun bindData(reward: Reward) {
             mBinding.cardName.text = reward.name
             mBinding.cardDescription.text = reward.description
             mBinding.cardImage.setBackgroundResource(reward.image)

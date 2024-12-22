@@ -9,7 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
-import com.app.domain.model.Benefit
+import com.app.domain.model.Reward
 import com.app.presentation.R
 import com.app.presentation.base.BaseActivity
 import com.app.presentation.databinding.ActivityHomeBinding
@@ -124,7 +124,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
     }
 
     private fun setRewardsAdapter(
-        rewardsData: List<Benefit>
+        rewardsData: List<Reward>
     ) {
         rewardsAdapter = RewardAdapter(rewardsData)
         dataBinding.apply {
