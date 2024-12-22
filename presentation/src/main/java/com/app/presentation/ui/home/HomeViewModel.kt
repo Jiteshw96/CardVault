@@ -1,4 +1,4 @@
-package com.app.presentation.ui.activity
+package com.app.presentation.ui.home
 
 import androidx.lifecycle.viewModelScope
 import com.app.domain.common.Result
@@ -7,10 +7,10 @@ import com.app.domain.usecase.GetCreditCardsUseCase
 import com.app.presentation.base.BaseViewModel
 import com.app.presentation.mapper.ResultMapper
 import com.app.presentation.model.BottomSheetInsights
-import com.app.presentation.state.HomeUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
@@ -20,8 +20,11 @@ class HomeViewModel(
     getCreditCardsUseCase: GetCreditCardsUseCase
 ) : BaseViewModel<HomeUiState>() {
 
-    val searchQuery = MutableStateFlow("")
+    private val searchQuery = MutableStateFlow("")
+    val _searchQuery = searchQuery.asStateFlow()
+
     val currentSelectedItem = MutableStateFlow(-1)
+    val _currentSelectedItem = currentSelectedItem.asStateFlow()
 
     override fun setInitialState(): HomeUiState = HomeUiState.Nothing
 
@@ -74,6 +77,14 @@ class HomeViewModel(
             initialValue = BottomSheetInsights(itemCount = 0, characterOccurrences = emptyMap()),
         )
 
+
+    fun updateSearchQuery(searchInput:String){
+        searchQuery.value = searchInput
+    }
+
+    fun updateCurrentCarouselItem(selectedItem:Int){
+        currentSelectedItem.value = selectedItem
+    }
 
     private fun findTopResults(
         rewardsList: List<Benefit>,

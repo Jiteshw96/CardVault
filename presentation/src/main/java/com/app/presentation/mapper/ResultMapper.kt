@@ -3,7 +3,7 @@ package com.app.presentation.mapper
 import com.app.domain.common.Result
 import com.app.domain.model.CreditCardData
 import com.app.presentation.R
-import com.app.presentation.state.HomeUiState
+import com.app.presentation.ui.home.HomeUiState
 
 object ResultMapper {
     fun <T> homeStateErrorMapper(resultState: Result.ErrorState<T>): HomeUiState.Error {

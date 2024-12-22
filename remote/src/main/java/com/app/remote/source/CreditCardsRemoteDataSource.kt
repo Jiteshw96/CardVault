@@ -4,7 +4,6 @@ import com.app.data.CreditCardDataEntity
 import com.app.data.datasource.remote.CreditCardsRemoteDataSource
 import com.app.remote.mapper.CreditCardDataRemoteMapper
 import com.app.remote.service.ApiService
-import org.koin.core.annotation.Single
 
 
 class CreditCardsRemoteDataSourceImpl(

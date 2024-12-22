@@ -1,4 +1,4 @@
-package com.app.presentation.state
+package com.app.presentation.ui.home
 
 import androidx.annotation.StringRes
 import com.app.domain.model.CreditCard

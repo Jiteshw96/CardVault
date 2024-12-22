@@ -14,7 +14,7 @@
         android:theme="@style/SplashTheme"
         tools:targetApi="31">
         <activity
-            android:name="com.app.presentation.ui.activity.HomeActivity"
+            android:name="com.app.presentation.ui.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
