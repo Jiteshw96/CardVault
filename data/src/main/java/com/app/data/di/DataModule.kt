@@ -6,6 +6,7 @@ import com.app.domain.usecase.GetCreditCardsUseCase
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 
+
 val dataModule = module {
 
     single { Dispatchers.IO }
