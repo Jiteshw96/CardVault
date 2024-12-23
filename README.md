@@ -33,12 +33,17 @@ Welcome to the Card Vault App! This application helps users to explore and compa
 ## Libraries Used
 
 - **AndroidX Libraries:**
-  - `androidx.core:core-ktx` - Provides Kotlin extensions for core Android components.
-  - `androidx.appcompat:appcompat` - Adds support for modern Android features on older devices.
-  - `androidx.activity:activity-ktx` - Provides Kotlin extensions for activity-related functions.
-  - `androidx.constraintlayout:constraintlayout` - Used for flexible and efficient layouts by following a flat hierarchy.
-  - `androidx.lifecycle:lifecycle-runtime-ktx` - Provides Kotlin extensions for lifecycle-aware components.
+  -  `androidx.core:core-ktx` - Provides Kotlin extensions for core Android components.
+  -  `androidx.appcompat:appcompat` - Adds support for modern Android features on older devices.
+  -  `androidx.activity:activity-ktx` - Provides Kotlin extensions for activity-related functions.
+  -  `androidx.activity:activity-compose` - This library is s part of the Jetpack Compose toolkit for Android, which provides a modern toolkit for building native Android UIs..
+  -  `androidx.lifecycle:lifecycle-runtime-ktx` - Provides Kotlin extensions for lifecycle-aware components.
   -  `androidx.core:core-splashscreen` - Add supports for app based custom splash screen.
+  -  `androidx.core:core-ktx` - Provides Kotlin extensions for core Android framework components..
+  -  `androidx.lifecycle:lifecycle-runtime-ktx` - Enables lifecycle-aware behavior in your composables..
+  -  `androidx.compose.material3:material3-android` - The Material3 Design components library, offering a wide range of pre-built UI elements that adhere to Google's Material Design guidelines, ensuring a visually appealing and user-friendly interface..
+
+androidx.navigation:navigation-compose: This library provides Navigation Component support for Jetpack Compose Applications.
 
 - **Material Design:**
   - `com.google.android.material:material` - Implements Material Design components and themes.
