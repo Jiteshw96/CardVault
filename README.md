@@ -58,5 +58,3 @@ Welcome to the Card Vault App! This application helps users to explore and compa
 <img src="screenshots/screenshot_5.png" alt="Screenshot 1" width="150"/>
 <img src="screenshots/screenshot_6.png" alt="Screenshot 1" width="150"/>
 ---
-
-Thank you for using the CardVault App !!!
