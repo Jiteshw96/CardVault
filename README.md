@@ -1,4 +1,4 @@
-#Card Vault App
+# Card Vault App
 
 Welcome to the Card Vault App! This application helps users to explore and compare the benefits and rewards offered by different credit cards. Whether you’re looking for cashback offers, shopping rewards, lounge access, or other perks, Card Vault helps you make an informed choice.
 
@@ -50,12 +50,13 @@ Welcome to the Card Vault App! This application helps users to explore and compa
   
 ## Screenshots
 
-<img src="screenshots/screenshot1.png" alt="Screenshot 1" width="150"/>
-<img src="screenshots/screenshot2.png" alt="Screenshot 2" width="150"/>
-<img src="screenshots/screenshot3.png" alt="Screenshot 3" width="150"/>
-<img src="screenshots/screenshot4.png" alt="Screenshot 4" width="150"/>
-
-
+<img src="screenshots/screenshot.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_1.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_2.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_3.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_4.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_5.png" alt="Screenshot 1" width="150"/>
+<img src="screenshots/screenshot_6.png" alt="Screenshot 1" width="150"/>
 ---
 
 Thank you for using the CardVault App !!!
